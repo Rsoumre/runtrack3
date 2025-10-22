@@ -55,7 +55,7 @@ img {
 /* Section */
 section {
     padding: 20px;
-    background: #fff;
+    background: #88b9e3;;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 900px;
@@ -69,7 +69,7 @@ body.konami section {
 
 /* Liens */
 a {
-    color: #0055ff;
+    color: #f0f1f1;
     text-decoration: none;
 }
 
