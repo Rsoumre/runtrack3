@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <section>
+        <!-- Formulaire de filtrage / recherche -->
+        <form method="post">
+            <label for="id">ID :</label>
+            <input type="text" id="id" name="id" >
+
+            <label for="nom">NOM :</label>
+            <input type="text" id="nom" name="nom" >
+
+            <label for="type">Type :</label>
+            <input type="text" id="type" name="type" >
+
+            <button id="submit-input" type="submit">Filtrer</button>
+        </form>
+        
+        <!-- Conteneur pour les résultats de recherche -->
+        <div id="results" aria-live="polite"></div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
