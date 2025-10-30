@@ -9,6 +9,8 @@ email.addEventListener('input', function () {
         error = 'le mail est requis';
     } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
         error = 'Format d\'email invalide.';
+    }else {
+        error = "";
     }
     email.nextElementSibling.textContent = error;
 })
