@@ -1,0 +1,30 @@
+   :root {
+       --color-cyan: #8de0f5;
+       --color-blue: #93b9ff;
+       --color-purple: #c7a0f8;
+       --color-salmon: #f8a48e;
+   }
+
+   .block {
+       border-radius: 8px;
+       height: 120px;
+   }
+
+   .cyan {
+       background-color: var(--color-cyan);
+       height: 150px;
+   }
+
+   .blue {
+       background-color: var(--color-blue);
+   }
+
+   .purple {
+       background-color: var(--color-purple);
+   }
+
+   .salmon {
+       background-color: var(--color-salmon);
+       height: 80px;
+   }
+
