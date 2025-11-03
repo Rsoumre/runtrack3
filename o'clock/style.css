@@ -2,7 +2,6 @@
     --bg: #efeff3;
     --card: #d6d4d4;
     --accent: #d7b80b;
-    /* bootstrap primary blue */
     --muted: #6b7280;
     --radius: 10px;
     --pad: 18px;
@@ -71,14 +70,12 @@ section h2 {
     text-align: center
 }
 
-/* Minuteur et chrono layout */
 #minuteur,
 #chrono {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    /* use min-height to avoid clipping; allow content to grow */
     min-height: 64px;
 }
 
@@ -124,14 +121,14 @@ button:hover {
     margin-left: auto;
 }
 
-/* Notifications area (inline) */
+
 #notification {
     max-width: 920px;
     margin: 12px auto 0;
     text-align: center;
 }
 
-/* Lists for alarms and laps */
+
 #alarmsList, #lapsList {
     list-style: none;
     margin: 8px 0 0;
