@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <h1>O'clock</h1>
+
+        <section id="horloge">
+            <h2>Horloge</h2>
+            <div id="notification" aria-live="polite"></div>
+            <div id="heure"></div>
+        </section>
+        
+        <section id="minuteur">
+            <h2>Minuteur</h2>
+            <div id="affichageMinuteur">00:00</div>
+            <input type="number" id="minutes" placeholder="Minutes" min="0">
+            <input type="number" id="secondes" placeholder="Secondes" min="0" max="59">
+            <button id="demarrerMinuteur">Démarrer le minuteur</button>
+            <button id="annulerMinuteur" type="button">Annuler</button>
+        </section>
+
+        <section id="chrono">
+            <h2>Chronométre</h2>
+            <div id="affichagechronometeur">00:00:00</div>
+            <button id="startchrono">Démarrer / Arrêter</button>
+            <button id="tourchrono">Tour</button>
+            <button id="ressetchrono">Reset</button>
+            <ul id="lapsList" aria-label="Tours du chronomètre"></ul>
+        </section>
+
+        <section>
+            <h2>Alarm</h2>
+            <input type="time" id="herurereveil" >
+            <input type="text" id="messagealarm" placeholder="Message">
+            <button id="ajoutealarm">Ajoute alarm</button>
+
+            <ul id="alarmsList" aria-label="Liste des alarmes"></ul>
+        </section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

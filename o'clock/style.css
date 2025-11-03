@@ -1,0 +1,223 @@
+:root {
+    --bg: #efeff3;
+    --card: #d6d4d4;
+    --accent: #d7b80b;
+    /* bootstrap primary blue */
+    --muted: #6b7280;
+    --radius: 10px;
+    --pad: 18px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+}
+
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 12px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin: 0 0 18px;
+    text-align: center
+}
+
+main,
+.container {
+    width: 100%;
+    max-width: 920px
+}
+
+section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: var(--pad);
+    margin-bottom: 16px;
+    box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+}
+
+section h2 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    color: var(--muted)
+}
+
+#horloge {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#heure {
+    font-weight: 700;
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+    padding: 18px 28px;
+    border-radius: 8px;
+    color: var(--accent);
+    background: linear-gradient(180deg, rgba(11, 94, 215, 0.08), rgba(11, 94, 215, 0.03));
+    min-width: 220px;
+    text-align: center
+}
+
+/* Minuteur et chrono layout */
+#minuteur,
+#chrono {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    /* use min-height to avoid clipping; allow content to grow */
+    min-height: 64px;
+}
+
+#minuteur input[type="number"],
+#minuteur input,
+#chrono input[type="text"],
+#minuteur input[type="time"],
+section:last-of-type input[type="time"] {
+    padding: 10px 12px;
+    border: 1px solid #e6e9ee;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 110px;
+}
+
+#minuteur button,
+#chrono button,
+button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(11,94,215,0.08);
+}
+
+#minuteur button:hover,
+#chrono button:hover,
+button:hover {
+    opacity: 0.95
+}
+
+#affichageMinuteur,
+#affichagechronometeur {
+    font-family: monospace;
+    font-size: 1.25rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #f3f6fb;
+    border: 1px solid #eef3ff;
+    margin-left: auto;
+}
+
+/* Notifications area (inline) */
+#notification {
+    max-width: 920px;
+    margin: 12px auto 0;
+    text-align: center;
+}
+
+/* Lists for alarms and laps */
+#alarmsList, #lapsList {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    max-height: 160px;
+    overflow: auto;
+}
+#alarmsList li, #lapsList li {
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    font-size: 0.95rem;
+}
+
+/* Alarm area */
+section:last-of-type {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 100px;
+}
+
+
+section:last-of-type input[type="time"],
+section:last-of-type input[type="text"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #e6e9ee
+}
+
+/* version mobile */
+@media (max-width:640px) {
+    body {
+       padding: 18px 8px
+    }
+
+    #heure {
+        font-size: 2rem;
+        min-width: 180px
+    }
+
+    #affichageMinuteur,
+    #affichagechronometeur {
+        margin-left: 0;
+        width: 100%;
+        text-align: center
+    }
+
+    section {
+        padding: 14px
+    }
+
+    #minuteur,
+    #chrono,
+    section:last-of-type {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    #minuteur input,
+    #minuteur button,
+    #chrono button,
+    #chrono input[type="text"],
+    section:last-of-type input,
+    section:last-of-type button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* larger tappable targets on mobile */
+    #minuteur button, #chrono button, button { padding: 14px 16px; font-size: 1rem; }
+}
+
+/* helper */
+.small-muted {
+    font-size: 0.85rem;
+    color: var(--muted)
+}
+
+/* focus styles */
+input:focus,
+button:focus {
+    outline: 3px solid rgba(11, 94, 215, 0.12);
+    outline-offset: 2px
+}
+
+#minutes, #secondes {
+    width: 120px;
+}
