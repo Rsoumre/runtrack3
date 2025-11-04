@@ -1,0 +1,25 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.list-group-item {
+    font-weight: 500;
+}
+
+.py-7 {
+  padding-top: 15rem !important;
+  padding-bottom: 15rem !important;
+}
+
+nav.bg-light .navbar-brand {
+    color: #007bff;
+    font-weight: 700;
+}
