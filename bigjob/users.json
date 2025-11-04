@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Admin",
+            "email": "admin@laplateforme.io",
+            "password": "admin123",
+            "role": "admin",
+            "created_at": "2025-11-04"
+        },
+        {
+            "id": 2,
+            "name": "Modérateur",
+            "email": "moderateur@laplateforme.io",
+            "password": "mod123",
+            "role": "moderator",
+            "created_at": "2025-11-04"
+        },
+        {
+            "id": 3,
+            "name": "Utilisateur",
+            "email": "user@laplateforme.io",
+            "password": "user123",
+            "role": "user",
+            "created_at": "2025-11-04"
+        }
+    ],
+    "requests": [
+        {
+            "id": 1,
+            "user_id": 3,
+            "date": "2025-11-10",
+            "status": "pending",
+            "created_at": "2025-11-04"
+        },
+        {
+            "id": 2,
+            "user_id": 3,
+            "date": "2025-11-15",
+            "status": "approved",
+            "approved_by": 2,
+            "created_at": "2025-11-04",
+            "updated_at": "2025-11-04"
+        }
+    ],
+    "settings": {
+        "max_requests_per_user": 5,
+        "request_advance_days": 14,
+        "auto_approve_moderators": true,
+        "email_notifications": true
+    }
+}

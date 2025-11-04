@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    	<!-- Header simple -->
+	<header class="bg-white shadow">
+		<nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+			<span class="text-2xl font-bold text-blue-700">RuntrackJS</span>
+			<ul class="flex space-x-6">
+				<li><a href="index.html" class="text-blue-700 hover:text-blue-500 font-medium">Accueil</a></li>
+				<li><a href="#" class="text-blue-700 hover:text-blue-500 font-medium">Docs</a></li>
+				<li><a href="conatct.html" class="text-blue-700 hover:text-blue-500 font-medium">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <!-- Section principale avec le formulaire stylisé -->
+    <main class="flex-grow container mx-auto p-8">
+        <section class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-center">Création de compte</h2>
+            <form>
+                <!-- Civilité -->
+                <div class="mb-6">
+                    <label class="block mb-2 font-semibold">Civilité :</label>
+                    <div class="flex space-x-6">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="civilite" value="mr" class="form-radio text-blue-600">
+                            <span class="ml-2"><i class="fa-solid fa-person mr-1"></i>M.</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="civilite" value="mme" class="form-radio text-pink-500">
+                            <span class="ml-2"><i class="fa-solid fa-person-dress mr-1"></i>Mme</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Prénom et Nom -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label for="prenom" class="block mb-2 font-semibold">Prénom :</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-2.5 text-gray-400"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" id="prenom" name="prenom" class="w-full pl-10 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" placeholder="Votre prénom">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="nom" class="block mb-2 font-semibold">Nom :</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-2.5 text-gray-400"><i class="fa-solid fa-user-tag"></i></span>
+                            <input type="text" id="nom" name="nom" class="w-full pl-10 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" placeholder="Votre nom">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adresse -->
+                <div class="mb-6">
+                    <label for="adresse" class="block mb-2 font-semibold">Adresse :</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-2.5 text-gray-400"><i class="fa-solid fa-location-dot"></i></span>
+                        <input type="text" id="adresse" name="adresse" class="w-full pl-10 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" placeholder="Votre adresse">
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 font-semibold">Email :</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-2.5 text-gray-400"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" id="email" name="email" class="w-full pl-10 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" placeholder="Votre email">
+                    </div>
+                </div>
+
+                <!-- Mot de passe -->
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 font-semibold">Mot de passe :</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-2.5 text-gray-400"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="password" name="password" class="w-full pl-10 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" placeholder="Mot de passe">
+                    </div>
+                </div>
+
+                <!-- Confirmation mot de passe -->
+                <div class="mb-6">
+                    <label for="password_confirm" class="block mb-2 font-semibold">Confirmer le mot de passe :</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-2.5 text-gray-400"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="password_confirm" name="password_confirm" class="w-full pl-10 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" placeholder="Confirmez le mot de passe">
+                    </div>
+                </div>
+
+                <!-- Passions -->
+                <div class="mb-6">
+                    <label class="block mb-2 font-semibold">Passions :</label>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="passions[]" value="informatique" class="form-checkbox text-blue-600">
+                            <span class="ml-2"><i class="fa-solid fa-computer"></i> Informatique</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="passions[]" value="voyages" class="form-checkbox text-blue-600">
+                            <span class="ml-2"><i class="fa-solid fa-plane"></i> Voyages</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="passions[]" value="sport" class="form-checkbox text-blue-600">
+                            <span class="ml-2"><i class="fa-solid fa-dumbbell"></i> Sport</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="passions[]" value="lecture" class="form-checkbox text-blue-600">
+                            <span class="ml-2"><i class="fa-solid fa-book"></i> Lecture</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Bouton de validation -->
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-600 transition-colors duration-200">
+                        <i class="fa-solid fa-user-plus mr-2"></i>Créer mon compte
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    
+</body>
+</html>

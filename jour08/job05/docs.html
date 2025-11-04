@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - RuntrackJS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-700">RuntrackJS</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-blue-700 hover:text-blue-500 font-medium">Accueil</a></li>
+                <li><a href="docs.html" class="text-blue-700 hover:text-blue-500 font-medium">Docs</a></li>
+                <li><a href="conatct.html" class="text-blue-700 hover:text-blue-500 font-medium">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Documentation avec sidebar -->
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8">
+        <!-- Sidebar -->
+        <aside class="md:w-64 flex-shrink-0">
+            <nav class="sticky top-24 bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">Chapitres</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#introduction" class="flex items-center text-gray-600 hover:text-blue-600">
+                            <i class="fa-solid fa-book-open mr-2"></i>
+                            Introduction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#installation" class="flex items-center text-gray-600 hover:text-blue-600">
+                            <i class="fa-solid fa-download mr-2"></i>
+                            Installation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#utilisation" class="flex items-center text-gray-600 hover:text-blue-600">
+                            <i class="fa-solid fa-code mr-2"></i>
+                            Utilisation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#composants" class="flex items-center text-gray-600 hover:text-blue-600">
+                            <i class="fa-solid fa-puzzle-piece mr-2"></i>
+                            Composants
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="flex-grow">
+            <!-- Introduction -->
+            <section id="introduction" class="mb-12 bg-white p-8 rounded-lg shadow-sm">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Introduction</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    RuntrackJS est une collection d'exercices et d'exemples pour apprendre le développement web moderne. 
+                    Dans cette documentation, vous trouverez tous les concepts nécessaires pour maîtriser JavaScript et Tailwind CSS.
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                    <p class="text-blue-700">
+                        <i class="fa-solid fa-lightbulb mr-2"></i>
+                        Pro tip: Commencez par les bases avant de passer aux concepts avancés.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Installation -->
+            <section id="installation" class="mb-12 bg-white p-8 rounded-lg shadow-sm">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Installation</h2>
+                <div class="space-y-4">
+                    <p class="text-gray-600">Pour commencer avec Tailwind CSS, vous pouvez utiliser le CDN :</p>
+                    <div class="bg-gray-800 text-gray-200 p-4 rounded-lg">
+                        <code>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code>
+                    </div>
+                    <p class="text-gray-600">Ou l'installer via npm :</p>
+                    <div class="bg-gray-800 text-gray-200 p-4 rounded-lg">
+                        <code>npm install tailwindcss</code>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Utilisation -->
+            <section id="utilisation" class="mb-12 bg-white p-8 rounded-lg shadow-sm">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Utilisation</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Classes utilitaires</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Flexbox : <code class="text-blue-600">flex, items-center</code></li>
+                            <li>Grille : <code class="text-blue-600">grid, grid-cols-2</code></li>
+                            <li>Espacement : <code class="text-blue-600">p-4, m-2, gap-6</code></li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Responsive Design</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Mobile : <code class="text-blue-600">text-sm</code></li>
+                            <li>Tablette : <code class="text-blue-600">md:text-base</code></li>
+                            <li>Desktop : <code class="text-blue-600">lg:text-lg</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Composants -->
+            <section id="composants" class="mb-12 bg-white p-8 rounded-lg shadow-sm">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Composants</h2>
+                <div class="space-y-6">
+                    <!-- Exemple de bouton -->
+                    <div class="border-b pb-6">
+                        <h3 class="text-xl font-semibold mb-4">Boutons</h3>
+                        <div class="flex gap-4 flex-wrap">
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                Bouton primaire
+                            </button>
+                            <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                                Bouton secondaire
+                            </button>
+                            <button class="border border-blue-500 text-blue-500 px-4 py-2 rounded hover:bg-blue-50">
+                                Bouton outline
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Exemple de carte -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Cartes</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white border rounded-lg overflow-hidden shadow-sm">
+                                <div class="p-6">
+                                    <h4 class="font-bold mb-2">Titre de la carte</h4>
+                                    <p class="text-gray-600">Contenu de la carte avec du texte descriptif.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white border rounded-lg overflow-hidden shadow-sm">
+                                <div class="p-6">
+                                    <h4 class="font-bold mb-2">Titre de la carte</h4>
+                                    <p class="text-gray-600">Contenu de la carte avec du texte descriptif.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-8 p-4">
+        <div class="container mx-auto text-center text-gray-600">
+            <p>&copy; 2025 RuntrackJS - Documentation</p>
+            <div class="mt-2 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-blue-500">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-500">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-500">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
