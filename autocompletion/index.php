@@ -7,7 +7,6 @@ $conn = new mysqli($host, $user, $password, $database);
 $conn->set_charset("utf8mb4");
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,18 +18,13 @@ $conn->set_charset("utf8mb4");
 <body>
 
 <div class="container">
-    <h1>
-        Sportifs Recherches
-    </h1>
+    <h1>Sportifs du Barça ⚽</h1>
     <form action="recherche.php" method="get">
-    <input type="text" id="search" placeholder="Rechercher un sportif..." autocomplete="off">
+        <input type="text" id="search" name="search" placeholder="Rechercher un joueur..." autocomplete="off">
+        <ul id="suggestions"></ul>
     </form>
 </div>
 
-
-
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
