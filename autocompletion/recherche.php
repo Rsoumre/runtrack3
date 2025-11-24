@@ -24,13 +24,13 @@ $resultats = $stmt->get_result();
 <body>
     <h1>Résultats pour « <?= htmlspecialchars($search) ?> »</h1>
 
-    <ul>
+    <ul class="resultats">
         <?php while ($r = $resultats->fetch_assoc()): ?>
-            <li>
                 <a href="element.php?id=<?= $r['id'] ?>">
-                    <?= htmlspecialchars($r['nom']) ?>
+                    <li>
+                        <?= htmlspecialchars($r['nom']) ?>
+                    </li>
                 </a>
-            </li>
         <?php endwhile; ?>
     </ul>
 

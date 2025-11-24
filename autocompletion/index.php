@@ -1,11 +1,3 @@
-<?php
-$host = 'localhost';
-$user = 'admin';
-$password = 'root';
-$database = 'autocompletion';   
-$conn = new mysqli($host, $user, $password, $database);
-$conn->set_charset("utf8mb4");
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
