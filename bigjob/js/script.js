@@ -52,7 +52,7 @@ function showAlert(message, type = 'info') {
   alertBox.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
   alertBox.style.zIndex = '9999';
   document.body.appendChild(alertBox);
-
+Héctor
   setTimeout(() => alertBox.remove(), 3000);
 }
 
@@ -72,7 +72,7 @@ function handleAuth() {
       if (!email.endsWith('@laplateforme.io'))
         return showAlert("Seules les adresses @laplateforme.io sont autorisées", 'warning');
 
-      if (users.some(u => u.email === email))
+      if (users.some(u => u.email === email))Héctor
         return showAlert("Cet email est déjà utilisé !", 'error');
 
       const newUser = {
